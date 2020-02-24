@@ -1,0 +1,60 @@
+package ExcelVerification;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class ExcelMain {
+
+	public static void main(String[] args) throws InterruptedException {
+
+		System.setProperty("webdriver.gecko.driver", "E:\\Eclipse Selenium\\geckodriver.exe");	
+	    WebDriver driver = new FirefoxDriver();
+		//WebDriverWait shortWait = new WebDriverWait(driver, 100);		
+		
+		// TODO Auto-generated method stub
+		
+		driver.get("http://www.store.demoqa.com");
+		//shortWait.until(ExpectedConditions.visibilityOfElementLocated(By.linkText("TOOLS")));
+        
+        // Print a Log In message to the screen
+        System.out.println("Successfully opened the website www.Store.Demoqa.com");
+
+		//Wait for 5 Sec
+		Thread.sleep(5000);
+		
+        // Close the driver
+        driver.quit();
+		
+		/*System.setProperty("webdriver.chrome.chromedriver","C:\\Documents\\chromedriver");
+		//comment the above 2 lines and uncomment below 2 lines to use Chrome
+		//System.setProperty("webdriver.chrome.driver","G:\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+    	
+        String baseUrl = "https://www.javatpoint.com/selenium-ide-first-test-case";
+        String expectedTitle = "Welcome: Mercury Tours";
+        String actualTitle = "";
+
+        // launch Fire fox and direct it to the Base URL
+        WebDriverWait miniWait = new WebDriverWait(driver, 10);
+        WebDriverWait shortWait = new WebDriverWait(driver, 20);
+        WebDriverWait longWait = new WebDriverWait(driver, 30);
+       // miniWait.until(ExpectedCondition(By.className("h1"));
+        Thread.sleep(5000);
+        driver.get(baseUrl);
+        String expectedResult = "Selenium IDE- First Test Case";
+        String pageHeading = driver.findElement(By.className("h1")).getText();
+        System.out.println("is text display" + pageHeading);
+        assert expectedResult == pageHeading;
+              
+        //close Fire fox
+        driver.close();*/
+       
+	}
+
+}
